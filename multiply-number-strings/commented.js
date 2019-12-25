@@ -27,6 +27,7 @@ function multiply(a, b)
                 if(output[i+z] === undefined) output[i+z] = 0;
 
                 // Actually multiply digits and add carryover
+                // Use += because we will be revisiting most digits.
                 output[i+z] += Number(a[i]) * Number(b[z]) + carryOver;
 
                 // set carryOver and trim current output down to one digit.
