@@ -1,5 +1,5 @@
-next-smaller: main.c solution.c
-	cc -o next-smaller main.c solution.c
+next_smaller: main.c solution.c
+	cc -o next_smaller main.c solution.c
 
 clean:
-	rm next-smaller
+	rm next_smaller
