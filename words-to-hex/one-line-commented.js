@@ -1,5 +1,5 @@
 // original: 
-// const shortWordsToHex=s=>s.split(' ').map(w=>"#"+[0,1,2].map(i=>w[i]?w.charCodeAt(i).toString(16):'00').join(''));
+// const wordsToHex=s=>s.split(' ').map(w=>"#"+[0,1,2].map(i=>w[i]?w.charCodeAt(i).toString(16):'00').join(''));
 
 // NOTE: If on one line, ES6 arrow functions auto-return
 // whatever that value evaluates to. However, the
@@ -7,7 +7,7 @@
 // lines and still auto-return, allowing us to expand
 // this function without adjusting the semantics or syntax.
 
-const shortWordsToHex= s => s
+const wordsToHex= s => s
     // Split s along the space characters into
     // an array of words.
     .split(' ')
