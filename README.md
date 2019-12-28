@@ -1,0 +1,3 @@
+# Whiteboard Problems (and other challenges)
+
+These are various problems I've solved on CodeWars or similar sites, if you want to look through them. Most but not all include both a plain solution, as well as a heavily commented solution. These are written in "CodeWars style", within reason, meaning I tried to be more concise than one might be in production code, while maintaining readability as best I can.
