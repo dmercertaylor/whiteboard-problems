@@ -5,7 +5,7 @@ function validBraces(braces){
     // stack we're going to push and pop braces to
     let opened = [];
     for(const char of braces){
-        // add brace to the stack if it's in our openers list
+        // add brace to the stack if it's in our openers array
         if(openers.includes(char)) opened.push(char);
         else {
             // If a closing brace is found, check if it closes
