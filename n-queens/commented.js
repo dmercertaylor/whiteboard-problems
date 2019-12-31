@@ -43,17 +43,17 @@ function queens(position, size) {
 
     // Function that will recursively place queens.
     // row = the row we try to place on
-    // startCol = the column to try placing from initially.
-    // startCol isn't really necessary, but theoretically
-    // would make this run faster if it were expanded to allow
-    // sizes greater than 10.
-    const placeQueens = (row, startCol=wrap(queenCols[wrap(row - 1)] + 2)) => {
+    const placeQueens = (row) => {
         // Becuase we recursively call this function on the next row (wrapping
         // around to 0 when row > size), reaching our initial queen row means
         // we have filled every queen, and is therefor our end state.
         if(row === firstQueen.row) return true;
         // Cycle through every col, starting from startCol and wrapping around
-        // when curCol > size.
+        // when curCol > size. Start on startCol, which defaults to two cols
+        // over from the previous row. This is often the correct value.
+        // If one wanted to make this solution faster, creating a list of
+        // values to cycle through instead of iterating would be a good way to start.
+        const startCol = wrap(queenCols[wrap(row - 1)] + 2);
         for(let i = 0, curCol=startCol; i < size; i++, curCol = wrap(startCol+i)){
             // if column is invalid, go to next col.
             if(!checkValid(row, curCol)) continue;
